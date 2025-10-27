@@ -52,11 +52,13 @@ class NestedIterator(nestedList: List<NestedInteger>) {
         return currentIndex +1 < flatenedList.size
     }
     fun flatten(nestedList: List<NestedInteger>){
+
         for(item in nestedList){
             if(item.getInteger() != null ) flatenedList.add(item.getInteger()!!)
             else flatten(item.getList()!!)
         }
     }
+
 }
 
 /**
